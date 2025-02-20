@@ -5,6 +5,7 @@ public partial class WebViewTest : ContentPage
     public WebViewTest()
     {
         InitializeComponent();
+         TestWeb.Source = new Uri("https://go.microsoft.com/fwlink/?LinkID=521962").ToString();
 #if ANDROID
         Microsoft.Maui.Handlers.WebViewHandler.Mapper.AppendToMapping("MyCustomization", (handler, view) => {
             handler.PlatformView.Settings.JavaScriptEnabled = true;
